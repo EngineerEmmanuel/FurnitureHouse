@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --small:2.5rem;
+    --small-center:2rem;
+    --white-color:white;
+    --letter-spacing:0.5rem;
+    --main-color:#DAB46D;
+    --secondary-color:rgb(49, 49, 49);
+    --ex: #F3F2EF;
+    --hover-btn-color:rgb(22, 22, 22);
+    
+}
+
+ 
+.head-contents ul li a, .head-contents ul li a:visited, .head-contents ul li a:active{
+    color: white;
+}
+.luxury-living-room-hero{
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/FH\ img/living3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    
+}
+.easy-nav-btns{
+    display: flex;
+    margin-top: 4rem;
+    gap: 1rem;
+    
+}
+.easy-nav-btns button{
+    scroll-snap-align: start;
+    padding: 0.5rem;
+    width: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+    transition: 0.5s;
+}
+.easy-nav-btns button a, .easy-nav-btns button a:visited{
+    color: white;
+}
+
+.easy-nav-btns button:hover{
+    background-color: var(--main-color);
+    transition: 0.5s;
+}
+
+
+
+/* ======= luxurylivingroom-products ====== */
+
+.luxurylivingroom-products{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+}
+/* ===== for the subcription section  */
+.top-sub{
+    margin-top: 4rem;
+}
+
+/* ===== FOR LUXURIOUS BEDROOM ====== */
+.luxury-bedroom-hero{
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/FH\ img/bedhead.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+/* ====== FOR THE DINNING HERO SECTION ====== */
+.luxury-dinning-hero{
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/FH\ img/dinning5.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+/* ====== FOR THE MIRROR SECTION HERO */
+.luxury-mirror-hero{
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/FH\ img/mirror18.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+.mobile-menu{
+    display: none;
+}
+#mobile-close-icon{
+    color: var(--white-color);
+}
+
+
+
+/* FOR THE MEDIA QUERY */
+
+/* FOR THE BTN */
+
+
+@media (max-width:1309px) {
+    .luxury-living-room-hero, .luxury-bedroom-hero, .luxury-dinning-hero, .luxury-mirror-hero {
+        height: 70vh;
+    }
+    .hero-div h1{
+        margin-bottom: 10rem;
+    }
+}
+@media (max-width:1015px) {
+    .head-contents ul{
+        display: none;
+    }
+    #mobile-menu-icon{
+        display: inline-block;
+        color: var(--white-color);
+        margin-right: 2rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+@media (max-width:1153px) {
+    .luxurylivingroom-products{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2.5rem;
+    }
+}
+@media (max-width:672px) {
+    .easy-nav-btns{
+        display:grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 27%;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        margin-bottom: 2rem;
+        gap: 2rem;
+        padding-bottom: 2rem;
+        /* overflow-x: auto; */
+    }
+    .easy-nav-btns button{
+        width: 10rem;
+        /* height: auto; */
+        overflow: scroll;
+    }
+}
+
+@media (max-width:509px) {
+    .luxurylivingroom-products{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.5rem; 
+    }
+}
+@media (max-width:566px) {
+    .easy-nav-btns{
+        gap: 4rem;
+        padding-bottom: 2rem;
+        /* overflow-x: auto; */
+    }
+}
+@media (max-width:423px) {
+    .easy-nav-btns{
+        gap: 5rem;
+        padding-bottom: 2rem;
+        /* overflow-x: auto; */
+    }
+}
+
+
+@media (max-width:405px) {
+    .luxury-living-room-hero, .luxury-bedroom-hero, .luxury-dinning-hero, .luxury-mirror-hero {
+        height: 90vh;
+    }
+}
